@@ -801,7 +801,7 @@ function snmpagent_notification($notification, $mib, $varbinds, $severity = SNMP
 		return false;
 	}
 
-	$path_snmptrap = read_config_option('snmpagent_path_snmptrap');
+	$path_snmptrap = read_config_option('path_snmptrap');
 
 	if (!in_array($severity, array(SNMPAGENT_EVENT_SEVERITY_LOW, SNMPAGENT_EVENT_SEVERITY_MEDIUM, SNMPAGENT_EVENT_SEVERITY_HIGH, SNMPAGENT_EVENT_SEVERITY_CRITICAL))) {
 		cacti_log('ERROR: Unknown event severity: "' . $severity . '" for ' . $notification . ' (' . $mib . ')', false, 'SNMPAGENT', POLLER_VERBOSITY_NONE);
